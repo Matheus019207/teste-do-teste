@@ -1,0 +1,314 @@
+:root {
+  --background: #ffffff;
+  --text: #000000;
+  --verdeClaro: #e8f5e9;
+}
+
+.dark-theme {
+  --background: #121212;
+  --verdeClaro: #191919;
+  --text: #e0e0e0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 60px 20px;
+  background: var(--background);
+  color: var(--text);
+  width: 100%;
+  height: 100%;
+}
+
+.content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.content p {
+  margin-bottom: 20px;
+  text-align: justify;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#imgincentivo {
+  width: 88%;
+  height: 80vh;
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#imgincentivomobile{
+  display: none;
+}
+
+.sobre {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--background);
+  color: var(--text);
+}
+
+.sobre h1 {
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cards1 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card1 {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.inner1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+
+.card1:hover .inner1 {
+  transform: rotateY(180deg);
+}
+
+.front1,
+.back1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.front1 {
+  background: var(--verdeClaro);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.clique-part {
+  color: var(--text);
+  display: none;
+}
+
+.back1 {
+  background: var(--verdeClaro);
+  color: var(--text);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#pontuar a {
+  color: white;
+  text-decoration: none;
+}
+
+#pontuar {
+  background-color: #1b5e20;
+  width: 200px;
+  height: 40px;
+  box-shadow: 0 4px 12px rgba(164, 163, 163, 0.9);
+  border: #bbb;
+  transition: .8s;
+}
+
+#pontuar:hover {
+  background-color: #2e7d32;
+  transition: .8s;
+}
+
+.card2 {
+  background: var(--verdeClaro);
+  color: var(--text);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  transition: .8s;
+  margin-top: 10px;
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+  transition: .8s;
+}
+
+@media (max-width: 1024px) {
+  #imgincentivo{
+    height: 50%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .cards1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .clique-part {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  #imgincentivo{
+    height: 50%;
+  }
+  
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .cards1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .clique-part {
+    display: block;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px){
+  #imgincentivo{
+    height: 50%;
+  }
+
+  .cards,
+  .cards1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cards {
+    gap: 12px;
+    width: 95%;
+    font-size: 0.9rem;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+    max-width: 350px;
+  }
+
+  .clique-part {
+    display: block;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 424px){
+  #imgincentivo{
+    height: 50%;
+  }
+
+  .cards,
+  .cards1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cards {
+    gap: 12px;
+    width: 95%;
+    font-size: 0.9rem;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+    max-width: 350px;
+  }
+
+  .clique-part {
+    display: block;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 374px){
+
+  #imgincentivo{
+    height: 50%;
+  }
+
+  .cards,
+  .cards1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cards {
+    gap: 12px;
+    width: 95%;
+    font-size: 0.9rem;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+    max-width: 350px;
+  }
+
+  .clique-part {
+    display: block;
+  }
+}
